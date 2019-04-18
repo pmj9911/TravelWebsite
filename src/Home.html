@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/slideshowImages.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+   <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+   <link rel="stylesheet" type="text/css" href="../css/homePageImages.css">
+   <link rel="stylesheet" type="text/css" href="../css/sidebarCSS.css">
+   <script type="text/javascript" src="helloPopup.js"></script>
+
+  </head>
+<body>
+<h1  align="center" > TRIVAGO  </h1>
+
+<span style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776;Hi!!!</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "25%";
+}
+
+function closeNav(temp) {
+  document.getElementById("myNav").style.width = "0%";
+    console.log(temp);
+}
+
+function SelectRedirect(){
+// ON selection of section this function will work
+//alert( document.getElementById('s1').value);
+
+switch(document.getElementById('s1').value)
+{
+
+case "mumbai":
+window.location="mumbai.html";
+break;
+
+case "delhi":
+window.location="delhi.html";
+break;
+
+case "kolkata":
+window.location="kolkata.html";
+break;
+case "chennai":
+window.location="chennai.html";
+break;
+
+/// Can be extended to other different selections of SubCategory //////
+default:
+window.location="../"; // if no selection matches then redirected to home page
+break;
+}// end of switch 
+}
+
+</script>
+
+  <div>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav('hello')">&times;</a>
+        <div class="overlay-content">
+          <a href="Home.html">Home</a>
+          <a href="../php/faqform.php">FAQ's</a>
+          <a href="Contact Us.html">Contact Us</a>
+        </div>
+        <div class="overlay-content">
+            <div style="border: 2px solid rgba(0,0,0, 0.0)">
+              <select  id="s1" NAME="section" onChange="SelectRedirect();">
+            <option value="CITIES" onclick="">CITIES</option>
+             <option value="mumbai" onclick="window.location.href='mumbai.html';">MUMBAI</option>
+             <option value="delhi" onclick="window.location.href='delhi.html';">DELHI</option>
+             <option value="kolkata" onclick="window.location.href='kolkata.html';">KOLKATA</option>
+             <option value="chennai" onclick="window.location.href='chennai.html';">CHENNAI</option>
+           </select>
+           </div> 
+        </div>
+      </div>
+    <div align="center">
+      <button id="helloButton" onclick="myFunction()" >click Me!</button>
+     <p id="demo"></p>
+    </div>
+
+<div class="row">
+  <div class="column left">
+   <h2> <a href ="../abc.php">About Us</a></h2>
+
+Ever wondered why places like Marine drive in Mumbai, famous bridge of Kolkata have been renowned! 
+The essence of the metropolitian cities lies in such beautiful places which have been attracting the
+ people living in the city itself as well as from all over the world. To take a tour to these cities,
+  we proposed to develop this website.
+<br>
+&nbsp This website has widely spaced tabs so that it is convinent for the users to switch or find stuffs. 
+The Home tab describes about the four metro cities in short paragraphs, the FAQ's provide you with the 
+most commonly asked questions and answers to them by the developers. The tabs of upcoming events and 
+places to visit are the heart to this website. 
+
+  </div>
+  
+  <div class="column right">
+  <br>
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="../assets/img/kolkata.jpg" style="width:100%" >
+      <div class="text">KOLKATA</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="../assets/img/mumbai.jpg" style="width:100%">
+      <div class="text">MUMBAI</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="../assets/img/chennai.jpg" style="width:100%">
+      <div class="text">CHENNAI</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="../assets/img/delhi.jpg" style="width:100%">
+        <div class="text">DELHI</div>
+      </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+    </div>
+    <br>
+    
+    
+  </div>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+  </div>
+  
+  
+</div>
+
+</body>
+</html>

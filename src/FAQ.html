@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "#cccccc");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "#ffffff");
+  });
+});
+</script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/slideshowImages.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+   <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+   <link rel="stylesheet" type="text/css" href="../css/homePageImages.css">
+   <link rel="stylesheet" type="text/css" href="../css/sidebarCSS.css">
+
+   <h1  align="center" > FAQ'S </h1>
+   <script type="text/javascript" src="faqForm.js"></script>
+   
+</head>
+<body>
+   
+    <span style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776;Hi!!!</span>
+    <script>
+        function openNav() {
+         document.getElementById("myNav").style.width = "25%";
+        }
+      
+        function closeNav(temp) {
+          document.getElementById("myNav").style.width = "0%";
+           console.log(temp);
+        }
+       </script>
+      
+      
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav('hello')">&times;</a>
+        <div class="overlay-content">
+          <a href="Home.html">Home</a>
+          <a href="FAQ.html">FAQ's</a>
+          <a href="Contact Us.html">Contact Us</a>
+        </div>
+        <div class="overlay-content">
+            <div style="border: 2px solid rgba(0,0,0, 0.0)">
+              <select>
+            <option value="CITIES" onclick="">CITIES</option>
+             <option value="mumbai" onclick="window.location.href='mumbai.html';">MUMBAI</option>
+             <option value="delhi" onclick="window.location.href='delhi.html';">DELHI</option>
+             <option value="kolkata" onclick="window.location.href='kolkata.html';">KOLKATA</option>
+             <option value="chennai" onclick="window.location.href='chennai.html';">CHENNAI</option>
+           </select>
+           </div> 
+        </div>
+      </div>
+<br>
+Hope the following frequently asked questions will help you solve your queries. If not, you can write to us on the form page given below or contact us using the details provided in the Contact Us tab.
+<div>
+<ol>
+
+<li> What places does the website cover?<br>
+Ans- This website covers the four metropolitian cities of India namely- Mumbai, Chennai, Kolkata and Delhi.
+</li>
+<br><br>
+
+<li> Why do we need to visit this website?<br>
+Ans- This website provides the details of tourists spots in the metro cities of India. Also, it has a list of the upcoming events in the cities like concerts, fests, etc.</li>
+<br><br>
+
+<li> Who will the person of contact for events, if you want to take part in any?<br>
+Ans- The list of upcoming events includes all the details like whom to contact, where to go, how to register etc.
+
+</li>
+<br> <br>
+ASK A QUESTION<br><br>
+<form >
+    <label><b>Email</b></label>
+    <input type="email" name="message" id="user_email">
+<br>
+    <label><b>  Question</b></label>
+    <input type="text" name="message" id="user_query">
+   
+   </form> 
+   <input type="submit" onclick="showInput(); "><br/>
+<label>Your input: </label>
+<p><span id='displayEmail'></span></p>
+
+<label>Your input: </label>
+<p><span id='displayQuery'></span></p>
+</ol>
+</div>
+</body>
+</body>
+</html>

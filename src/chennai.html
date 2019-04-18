@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1  align="center" > TRIVAGO  </h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../css/slideshowImages.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+<link rel="stylesheet" type="text/css" href="../css/homePageImages.css">
+<link rel="stylesheet" type="text/css" href="../css/sidebarCSS.css">
+
+</head>
+<body background="../assets/img/chennai.jpg" style=" background-repeat:no-repeat;  background-size:cover;">
+  <span style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776;Hi!!!</span>
+
+ <script>
+  function openNav() {
+   document.getElementById("myNav").style.width = "25%";
+  }
+
+  function closeNav(temp) {
+    document.getElementById("myNav").style.width = "0%";
+     console.log(temp);
+  }
+ </script>
+
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('hello')">&times;</a>
+  <div class="overlay-content">
+    <a href="Home.html">Home</a>
+    <a href="FAQ.html">FAQ's</a>
+    <a href="Contact Us.html">Contact Us</a>
+  </div>
+  <div class="overlay-content">
+      <div style="border: 2px solid rgba(0,0,0, 0.0)">
+        <select>
+      <option value="CITIES" onclick="">CITIES</option>
+       <option value="mumbai" onclick="window.location.href='mumbai.html';">MUMBAI</option>
+       <option value="delhi" onclick="window.location.href='delhi.html';">DELHI</option>
+       <option value="kolkata" onclick="window.location.href='kolkata.html';">KOLKATA</option>
+       <option value="chennai" onclick="window.location.href='chennai.html';">CHENNAI</option>
+     </select>
+     </div> 
+  </div>
+</div>
+
+<font color="black">
+
+<h2 align="center"> CHENNAI </h2>
+  <div class="column left">
+<p align="justify">  Chennai  also known by its former name Madras is the capital of the Indian state of Tamil Nadu. Located on the Coromandel Coast off the Bay of Bengal, it is the biggest cultural, economic and educational centre of south India. According to the 2011 Indian census, it is the sixth most populous city and fourth-most populous urban agglomeration in India. The city together with the adjoining regions constitute the Chennai Metropolitan Area, which is the 36th-largest urban area by population in the world.Chennai is among the most visited Indian cities by foreign tourists. It was ranked the 43rd most visited city in the world for the year 2015. The Quality of Living Survey rated Chennai as the safest city in India.Chennai attracts 45 percent of health tourists visiting India, and 30 to 40 percent of domestic health tourists.As such, it is termed "India's health capital". As a growing metropolitan city in a developing country, Chennai confronts substantial pollution and other logistical and socio-economic problems.</p>
+</div>
+
+<br>
+<br>
+<br>
+</font>
+</body>
+</html>
+

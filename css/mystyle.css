@@ -1,0 +1,26 @@
+
+body {
+    background-color: PINK;
+  }
+  
+  h1 {
+    color: navy;
+    margin-left: 20px;
+    font-family: "Comic Sans MS"; 
+  }
+
+  h2{   
+    color: brown;
+    font-family: "Tangerine", serif;
+    text-align: center;
+    font-size:35px;
+  }
+
+  .aboutUs{
+    color: brown;
+      width: 300px;
+     text-align: justify;
+      
+      margin: 25px;
+    
+  }

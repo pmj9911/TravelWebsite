@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 50%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Images used */
+.img1 { background-image: url("../assets/img/img_snow3.jpg"); }
+.img2 { background-image: url("../assets/img/img_girl.jpg"); }
+.img3 { background-image: url("../assets/img/img_lights.jpg"); }
+.img4 { background-image: url("../assets/img/img_nature.jpg"); }
+.img5 { background-image: url("../assets/img/img_forest.jpg"); }
+.img6 { background-image: url("../assets/img/img_woods.jpg"); }
+
+/* Position text in the middle of the page/image */
+.button {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  border: 10px solid #f1f1f1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.demo {
+	background-image: url("1.jpg");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 100%;
+	}
+</style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="jquery.easybg.js"></script>
+  
+  <script>
+    $(window).load(function(){
+      $('#container').easybg({
+      images: [ // an array of background dimages
+      '../assets/img/img_girl.jpg',
+      '../assets/img/img_snow3.jpg',
+      '../assets/img/img_lights.jpg',
+      '../assets/img/img_nature.jpg',
+      '../assets/img/img_forest.jpg',
+      '../assets/img/img_woods.jpg'
+      ],
+      interval: 700,
+      speed : 100, // 1 minute
+      ignoreError : false,
+      changeMode : 'random', // normal or random
+      initIndex : 0,
+      cloneClassId : null,
+      cloneClassName : 'easybgClone',
+      debug : false
+      });
+    });
+      </script>
+
+</head>
+<body>
+
+  <div id="container" class="demo">
+   
+       
+   
+  </div>
+<!-- <div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div> -->
+
+<div class="button" onclick="window.location.href='Home.html';">GO TO HOME PAGE</div>
+
+</body>
+</html>
+
